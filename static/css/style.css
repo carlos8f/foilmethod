@@ -1,0 +1,46 @@
+html, body, #page {
+  height: 100%;
+}
+body {
+  background: black url(../images/noise.jpg);
+}
+h1 {
+  font-weight: normal;
+}
+.main-photo {
+  background: url(../images/main-photo-bw.jpg) center 50px no-repeat transparent fixed;
+  height: 100%;
+}
+div.topbar {
+  padding-left: 30px;
+  height: 60px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(0, 0, 0, 0.8) inset;
+  background: url(../images/noise.jpg) transparent;
+}
+div.topbar h3 {
+  float: left;
+  position: relative;
+}
+div.topbar a.logo {
+  background: url(../images/logo.png) center no-repeat;
+  display: block;
+  position: absolute;
+  top: -65px;
+  left: -120px;
+  width: 426px;
+  height: 306px;
+}
+a.logo span {
+  display: none;
+}
+div.topbar h3, div.topbar ul {
+  margin-top: 10px;
+}
+div.topbar ul {
+  float: right;
+}
+div.topbar ul li a {
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  font-size: 17px;
+}
