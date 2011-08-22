@@ -11,10 +11,9 @@
 
   var app = {};
 
-  var lastURI = '/';
+  var lastURI;
 
   var initialize = app.initialize = function() {
-    $('#page').empty().append(render('anon-home')).hide().fadeIn(5000);
     // Render persistent elements.
     $('#topbar').html(render('topbar'));
     $('#topbar ul').hide();
@@ -22,7 +21,7 @@
 
     setTimeout(function() {
       $('#topbar a.logo, #topbar ul').effect('easeOutCubic', 'slow');
-      $('#topbar a.logo, #topbar ul').show('slide', {direction: 'up'});
+      $('#topbar a.logo, #topbar ul').show('slide', {direction: 'up'}, 'slow');
     }, 1000);
 
     // Navigate according to the current hash.
@@ -52,6 +51,7 @@
       m = regex.exec(uri);
       if (m) {
         var id = m[1] || null;
+        lastURI = uri;
         $('#page').empty();
         controller[routes[path]].apply(app, [id]);
         break;
@@ -66,6 +66,13 @@
   var controller = app.controller = {
     home: function() {
       $('#page').append(render('anon-home'));
+      var i = 0;
+      $('.mask').each(function() {
+        var context = this;
+        setTimeout(function() {
+          $(context).fadeOut();
+        }, i++ * 500);
+      });
     },
     bio: function() {
 

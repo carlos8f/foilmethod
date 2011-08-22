@@ -8,8 +8,30 @@ h1 {
   font-weight: normal;
 }
 .main-photo {
-  background: url(../images/main-photo-bw.jpg) center 50px no-repeat transparent fixed;
+  background: url(../images/main-photo-color.jpg) center 50px no-repeat transparent fixed;
   height: 100%;
+  position: relative;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: center 50px no-repeat transparent fixed;
+  z-index: 10;
+}
+.mask-trunk {
+  background-image: url(../images/mask-trunk.png);
+}
+.mask-colin {
+  background-image: url(../images/mask-colin.png);
+}
+.mask-kieth {
+  background-image: url(../images/mask-kieth.png);
+}
+.mask-carlos {
+  background-image: url(../images/mask-carlos.png);
 }
 div.topbar {
   padding-left: 30px;
