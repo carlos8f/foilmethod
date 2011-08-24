@@ -12,12 +12,13 @@ h1 {
   height: 624px;
   padding-top: 110px;
 }
-.main-photo .page {
+.page {
   margin: auto;
   width: 940px;
   position: relative;
+  color: #ddd;
 }
-.main-photo .quote {
+.quote {
   position: absolute;
   width: 550px;
   font-size: 2em;
@@ -30,13 +31,17 @@ h1 {
   color: #ccc;
   text-align: center;
 }
-.main-photo .quote .quote-mark {
+.quote .quote-mark {
   font-size: 1.5em;
 }
-.main-photo .quote em {
+.quote em {
   font-style: normal;
   font-size: 1.5em;
   color: white;
+}
+.next-show {
+  width: 440px;
+  text-align: center;
 }
 div.topbar {
   padding-left: 30px;
@@ -81,4 +86,37 @@ div.topbar ul li a:hover {
   left: 0;
   bottom: 0;
   z-index: 10;
+}
+.bio, .calendar {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  color: #ccc;
+  margin: 0 50px;
+}
+h2 {
+  color: white;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 3em;
+  color: white;
+}
+.page {
+  color:
+}
+.page a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dotted white;
+}
+.page p {
+  margin: 1.5em 0;
+  font-size: 1.2em;
+}
+.page ul li {
+  margin: 1.5em 0;
+  color: #ddd;
+}
+.external span {
+  background: url(../images/external.png) right no-repeat;
+  padding-right: 16px;
 }

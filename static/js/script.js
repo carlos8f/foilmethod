@@ -3,10 +3,7 @@
   var routes = {
     '/': 'home',
     '/bio': 'bio',
-    '/media': 'media',
-    '/calendar': 'calendar',
-    '/contact': 'contact',
-    '/blog': 'blog'
+    '/calendar': 'calendar'
   };
 
   var app = {};
@@ -16,7 +13,6 @@
   var initialize = app.initialize = function() {
     // Render persistent elements.
     $('#topbar').html(render('topbar'));
-
     $('#player').html(render('player'));
 
     // Navigate according to the current hash.
@@ -24,7 +20,14 @@
 
     // Listen for hash changes.
     window.addEventListener('hashchange', function() {
-      app.navigate();
+      if ($('.page').length) {
+        $('.page').fadeOut(500, function() {
+          app.navigate();
+        });
+      }
+      else {
+        app.navigate();
+      }
     }, false);
   };
 
@@ -49,6 +52,7 @@
         lastURI = uri;
         $('#page').empty();
         controller[routes[path]].apply(app, [id]);
+        $('.page').hide().fadeIn();
         break;
       }
     }
@@ -60,22 +64,17 @@
 
   var controller = app.controller = {
     home: function() {
-      $('#page').append(render('anon-home'));
+      $('#page').append(render('home'));
+      $('.next-show').hide();
+      $('.quote').hide().delay(1000).show('slide', {direction: 'right'}, 500, function() {
+        $('.next-show').delay(200).show('pulsate');
+      });
     },
     bio: function() {
-
-    },
-    media: function() {
-
+      $('#page').append(render('bio'));
     },
     calendar: function() {
-
-    },
-    contact: function() {
-
-    },
-    blog: function() {
-
+      $('#page').append(render('calendar'));
     }
   };
 
