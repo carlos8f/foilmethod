@@ -65,9 +65,12 @@
   var controller = app.controller = {
     home: function() {
       $('#page').append(render('home'));
+      $('.arrow').hide();
       $('.next-show').hide();
       $('.quote').hide().delay(1000).show('slide', {direction: 'right'}, 500, function() {
-        $('.next-show').delay(200).show('pulsate');
+        $('.next-show').delay(200).show('pulsate', function() {
+          $('.arrow').fadeIn(100).fadeOut(100).fadeIn(1000).delay(5000).fadeOut(500);
+        })
       });
     },
     bio: function() {
