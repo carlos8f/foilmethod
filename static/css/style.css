@@ -101,6 +101,9 @@ div.topbar ul li a:hover, div.topbar ul li a.active {
   color: #ccc;
   margin: 0 50px;
 }
+.calendar {
+  padding-top: 0;
+}
 h2 {
   color: white;
   font-family: Georgia, serif;
