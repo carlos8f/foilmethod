@@ -17,6 +17,8 @@
     // Render persistent elements.
     $('#topbar').html(render('topbar'));
 
+    $('#player').html(render('player'));
+
     // Navigate according to the current hash.
     navigate();
 
