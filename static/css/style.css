@@ -128,3 +128,10 @@ h2 {
   background: url(../images/external.png) right no-repeat;
   padding-right: 16px;
 }
+.poster {
+  text-align: center;
+}
+.poster a {
+  border: none;
+}
+
