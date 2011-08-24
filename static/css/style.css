@@ -92,7 +92,7 @@ div.topbar ul li a:hover {
 }
 .arrow {
   height: 128px;
-  background: url(../images/down-arrow.png) 0 10px no-repeat;
+  background: url(../images/down-arrow.png) top left no-repeat;
 }
 .player {
   margin-left: 30px;
