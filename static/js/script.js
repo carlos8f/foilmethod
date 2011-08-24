@@ -16,13 +16,6 @@
   var initialize = app.initialize = function() {
     // Render persistent elements.
     $('#topbar').html(render('topbar'));
-    $('#topbar ul').hide();
-    $('#topbar a.logo').hide();
-
-    setTimeout(function() {
-      $('#topbar a.logo, #topbar ul').effect('easeOutCubic', 'slow');
-      $('#topbar a.logo, #topbar ul').show('slide', {direction: 'up'}, 'slow');
-    }, 1000);
 
     // Navigate according to the current hash.
     navigate();
@@ -66,13 +59,6 @@
   var controller = app.controller = {
     home: function() {
       $('#page').append(render('anon-home'));
-      var i = 0;
-      $('.mask').each(function() {
-        var context = this;
-        setTimeout(function() {
-          $(context).fadeOut();
-        }, i++ * 500);
-      });
     },
     bio: function() {
 

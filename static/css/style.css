@@ -8,36 +8,40 @@ h1 {
   font-weight: normal;
 }
 .main-photo {
-  background: url(../images/main-photo-color.jpg) center 50px no-repeat transparent fixed;
+  background: url(../images/main-photo.jpg) top no-repeat transparent fixed;
   height: 100%;
+  padding-top: 110px;
+}
+.main-photo .page {
+  margin: auto;
+  width: 940px;
   position: relative;
 }
-.mask {
-  width: 100%;
-  height: 100%;
+.main-photo .quote {
   position: absolute;
-  top: 0;
-  left: 0;
-  background: center 50px no-repeat transparent fixed;
-  z-index: 10;
+  width: 550px;
+  font-size: 3em;
+  line-height: 1.3em;
+  font-family: Georgia, serif;
+  top: 200px;
+  right: 70px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: #aaa;
 }
-.mask-trunk {
-  background-image: url(../images/mask-trunk.png);
+.main-photo .quote .quote-mark {
+  font-size: 1.5em;
 }
-.mask-colin {
-  background-image: url(../images/mask-colin.png);
-}
-.mask-kieth {
-  background-image: url(../images/mask-kieth.png);
-}
-.mask-carlos {
-  background-image: url(../images/mask-carlos.png);
+.main-photo .quote em {
+  font-style: normal;
+  color: white;
 }
 div.topbar {
   padding-left: 30px;
-  height: 60px;
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(0, 0, 0, 0.8) inset;
-  background: url(../images/noise.jpg) transparent;
+  height: 110px;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
 }
 div.topbar h3 {
   float: left;
@@ -47,10 +51,9 @@ div.topbar a.logo {
   background: url(../images/logo.png) center no-repeat;
   display: block;
   position: absolute;
-  top: -65px;
-  left: -120px;
-  width: 426px;
-  height: 306px;
+  width: 414px;
+  height: 70px;
+  border-radius: 5px;
 }
 a.logo span {
   display: none;
@@ -60,9 +63,14 @@ div.topbar h3, div.topbar ul {
 }
 div.topbar ul {
   float: right;
+  padding: 20px 20px 0 0;
 }
 div.topbar ul li a {
-  padding: 10px 20px 10px 20px;
-  border-radius: 5px;
-  font-size: 17px;
+  padding: 15px 25px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+div.topbar ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
