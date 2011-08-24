@@ -14,6 +14,12 @@
     // Render persistent elements.
     $('#topbar').html(render('topbar'));
     $('#player').html(render('player'));
+    $('.arrow').hide();
+
+    $('.nav a').click(function() {
+      $('.nav a').removeClass('active');
+      $(this).addClass('active');
+    });
 
     // Navigate according to the current hash.
     navigate();
@@ -51,6 +57,7 @@
         var id = m[1] || null;
         lastURI = uri;
         $('#page').empty();
+        $('.nav-' + routes[path]).addClass('active');
         controller[routes[path]].apply(app, [id]);
         $('.page').hide().fadeIn();
         break;
@@ -65,7 +72,6 @@
   var controller = app.controller = {
     home: function() {
       $('#page').append(render('home'));
-      $('.arrow').hide();
       $('.next-show').hide();
       $('.quote').hide().delay(1000).show('slide', {direction: 'right'}, 500, function() {
         $('.next-show').delay(200).show('pulsate', function() {

@@ -81,7 +81,7 @@ div.topbar ul li a {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
-div.topbar ul li a:hover {
+div.topbar ul li a:hover, div.topbar ul li a.active {
   background-color: rgba(0, 0, 0, 0.8);
 }
 #player {
