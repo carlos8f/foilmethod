@@ -1,15 +1,15 @@
-html, body, #page {
-  height: 100%;
+html {
+  background: black url(../images/noise.jpg);
 }
 body {
-  background: black url(../images/noise.jpg);
+  background: transparent;
 }
 h1 {
   font-weight: normal;
 }
 .main-photo {
-  background: url(../images/main-photo.jpg) top no-repeat transparent fixed;
-  height: 100%;
+  background: url(../images/main-photo.jpg) top no-repeat transparent;
+  height: 624px;
   padding-top: 110px;
 }
 .main-photo .page {
@@ -20,20 +20,22 @@ h1 {
 .main-photo .quote {
   position: absolute;
   width: 550px;
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1.3em;
   font-family: Georgia, serif;
   top: 200px;
   right: 70px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 10px;
-  color: #aaa;
+  color: #ccc;
+  text-align: center;
 }
 .main-photo .quote .quote-mark {
   font-size: 1.5em;
 }
 .main-photo .quote em {
   font-style: normal;
+  font-size: 1.5em;
   color: white;
 }
 div.topbar {
