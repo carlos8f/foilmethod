@@ -93,7 +93,7 @@ div.topbar ul li a:hover, div.topbar ul li a.active {
 }
 .arrow {
   height: 128px;
-  background: url(../images/down-arrow.png) top -30px no-repeat;
+  background: url(../images/down-arrow.png) -30px top no-repeat;
 }
 .bio, .calendar {
   background-color: rgba(0, 0, 0, 0.8);
