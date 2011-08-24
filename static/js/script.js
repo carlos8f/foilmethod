@@ -57,6 +57,11 @@
         var id = m[1] || null;
         lastURI = uri;
         $('#page').empty();
+        $('.nav a').each(function() {
+          if (!$(this).hasClass('.nav-' + routes[path])) {
+            $(this).removeClass('active');
+          }
+        });
         $('.nav-' + routes[path]).addClass('active');
         controller[routes[path]].apply(app, [id]);
         $('.page').hide().fadeIn();
