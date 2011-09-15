@@ -3,7 +3,8 @@
   var routes = {
     '/': 'home',
     '/bio': 'bio',
-    '/calendar': 'calendar'
+    '/calendar': 'calendar',
+    '/media': 'media'
   };
 
   var app = {};
@@ -92,6 +93,9 @@
     },
     calendar: function() {
       $('#page').append(render('calendar'));
+    },
+    media: function() {
+      $('#page').append(render('media'));
     }
   };
 
