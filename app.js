@@ -10,13 +10,8 @@ var express = require('express'),
 
 // Configuration
 app.configure(function() {
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.cookieParser());
-  app.use(express.session({ secret:  conf.session.secret}));
   app.use(app.router);
   app.use(express.static(__dirname + '/static'));
-  app.enable('jsonp callback');
   app.register('._', {
     compile: function(str, options) {
       var compiled = _.template(str);
